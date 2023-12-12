@@ -60,6 +60,6 @@ public class EmpTmp
 
     public void sayHi()
     {
-        System.out.printf("%s says hello\n", this.name);
+        System.out.printf("%s says hello from EmpTmp\n", this.name);
     }
 }
