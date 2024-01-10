@@ -4,7 +4,7 @@ import javax.swing.JTextField;
 import javax.swing.JFrame;
 import java.awt.event.*;
 
-public class lec6 /*implements ActionListener*/{
+public class lec6 implements ActionListener{
     JFrame f;
     JButton btn;
     JTextField tf;
@@ -16,8 +16,7 @@ public class lec6 /*implements ActionListener*/{
         tf.setBounds(50,50,150,20);
         btn.setBounds(50,100,80,30);
 
-        MyActionListener listener = new MyActionListener();
-        btn.addActionListener(listener); // or btn.addActionListener(this); if you not create private class to implements Actionlistener
+        btn.addActionListener(this); // or btn.addActionListener(listener); if you create private class to implements Actionlistener
 
         f.add(tf);
         f.add(btn);
@@ -42,19 +41,9 @@ public class lec6 /*implements ActionListener*/{
         JOptionPane.showMessageDialog(null, "hello " + name);
     }
 
-    // @Override
-    // public void actionPerformed(ActionEvent e) {  // use this when parents class use implements to Actionlistener
-    //     tf.setText("from action performed");
-        
-    // }
-
-    private class MyActionListener implements ActionListener
-    {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            tf.setText("from private class Listner");
-        }
-        
+    @Override
+    public void actionPerformed(ActionEvent e) {  // use this when parents class use implements to Actionlistener
+        tf.setText("from lec6"); 
     }
+
 }
