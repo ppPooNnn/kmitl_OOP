@@ -105,7 +105,7 @@ public class lab8
         System.out.println("-----------q4.1-------------");
         Collections.sort(singerList, byName);
         singerList.forEach(System.out :: println);
-        singerList.sort(Singer :: getStyle);
+        Collections.sort(singerList, (o1, o2) -> o1.getStyle().compareTo(o2.getStyle()));
         System.out.println("-----------q4.2-------------");
         singerList.forEach(System.out :: println);
         
