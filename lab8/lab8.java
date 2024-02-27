@@ -68,7 +68,7 @@ public class lab8
 
         System.out.println("-----------q1.5-------------");
         NumberProcessor np = new NumberProcessor();
-        nums.forEach(np :: printHalf);
+        nums.forEach(np :: printHalf); // np.printHalf -> np :: printHalf
     }
 
     public static void q2_forEachSingerName()
@@ -77,7 +77,7 @@ public class lab8
         singerList.stream().map(singer -> singer.getName()).forEach(System.out :: println);
 
         System.out.println("-----------q2.2-------------");
-        singerList.stream().map(Singer :: getName).forEach(System.out :: println);
+        singerList.stream().map(Singer :: getName).forEach(System.out :: println); // singer.getname
     }
 
     public static void q3_lambda_comparator()
@@ -95,7 +95,7 @@ public class lab8
         System.out.println("-----------q3.1-------------");
         Comparator<Singer> byStyle2 = (o1, o2) -> o1.getStyle().compareTo(o2.getStyle());
         Collections.sort(singerList, byStyle2);
-        singerList.forEach(System.out :: println);
+        singerList.forEach(System.out :: println); // System.out.println -> System.out :: printf
     }
 
     public static void q4_method_reference_comparator()
