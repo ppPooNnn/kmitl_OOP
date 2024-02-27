@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 
 
-public class LabTable_Skel {
+public class LabTable_660261 {
     static String [] names = {"phy", "chem", "bio", "math", "stat", "com", "kdai"};
     static ArrayList<String> name_lis = new ArrayList<>(Arrays.asList(names));
     static String [] matches = new String[21];
