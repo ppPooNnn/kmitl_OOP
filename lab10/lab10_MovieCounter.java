@@ -259,8 +259,4 @@ public class lab10_MovieCounter
 
         System.out.println(opt.get());
     }
-
-    public static void main(String[] args) {
-        hintQ11();
-    }
 }
